@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Abel;
+    color: white;
+}
+@font-face {
+    font-family:Abel ;
+    src: url(../fonts/Abel-Pro.otf);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+
+}
+main {
+    display: flex;
+    flex: 1;
+}
+.aside1, .aside2 {
+    flex: 1;
+    background-color: rgb(43, 42, 42);
+}
+
+.header {
+    
+background-color: rgb(183, 0, 0);
+}
+.main-section {
+    flex: 2 2 10%;
+    background-color: black;
+}
+.footer {
+
+    background-color: rgb(43, 42, 42);
+}
+img {
+    width: 250px;
+    margin-top: 20px;
+}
+h1{
+    padding: 20px;
+    color: #000;
+}
+h2 {
+    font-size: 35px;
+    padding: 15px;
+}
+p {
+    padding: 20px;
+    font-size: 25px;
+}
+.text {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 30px;
+}
