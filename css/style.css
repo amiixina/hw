@@ -80,7 +80,7 @@ h2 {
     margin-left: 132px;
 }
 h3 {
-    padding: 15px;
+    padding: 20px;
     font-family: Lato;
     font-size: 32px;
     line-height: 38px;
@@ -98,8 +98,6 @@ h3 {
 }
 .left-block {
     background-color: #ececec;
-    width: 425px;
-    height: 333px;
     border-radius: 8px;
 }
 .content {
@@ -120,6 +118,7 @@ p {
     height: 333px;
 }
 .c {
+    padding-left: 20px;
     width: 225px;
     height: 94px;
     font-family: Lato;
@@ -172,4 +171,5 @@ footer{
 }
 a {
     margin: 5px;
+    font-family: Lato;
 }
