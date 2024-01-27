@@ -10,15 +10,19 @@
 </head>
 <body>
     <div class="container-lg">
-    <div class="navbar navbar-expand bg-body-tertiary d-md-flex ">
-        <div class="container-fluid">
+      <div class="container-fluid ">
+    <div class="navbar navbar-expand bg-body-tertiary d-flex flex-md-colum flex-lg-row ">
+      <div class="container ">
             <a class="navbar-brand" href="#">
                 <img src="./img/Img.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
               </a>
-          <a class="navbar-brand" href="#">Navbar</a>
+      <div class="container-fluid ">  
+          <a class="navbar-brand" href="#">Pricing example</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" pading-left="4">
             <span class="navbar-toggler-icon"></span>
           </button>
+        </div>
+        <div class="container ">
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto" >
               <li class="nav-item">
@@ -35,28 +39,30 @@
               </li>
             </ul>
           </div>
+          </div>
+      </div>
         </div>
       </div>
       <header>
        
         <h1 class="text-center my-4">Pricing</h1>
-        <p class="text-center mx-auto p-5" style="width:663.2px;">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+        <p class="text-center mx-auto p-5 fs-5" style="width:663.2px;">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
     
     </header>    
-      <main class="row d-flex justify-content-center ">
-        <div class="card text-center mb-3 gap-3"  style="width: 326px;">
-          <div class=" mx-auto text-center">
+      <main class="flex-lg-row gap-lg-4 d-lg-flex justify-content-center col-md">
+        <div class="card text-center mb-3" ">
+          <div class="text-center">
             <div class="card-header">
               <h4>Free</h4>
           </div>
           </div>
-            <div class="card-body">
+            <div class="card-body  ">
               <h2 class="card-title"> $0<span class="text-body-tertiary">/mo</span></h2>
               <p class="card-text text-center mx-auto p-3" style="width: 136.31px;">10 users included 2 GB of storage Email support Help center access</p>
               <button type="button" class="btn btn-outline-primary fs-5" style="width: 261.98px; height: 48px;">Sign up for free</button>
           </div>
         </div>
-            <div class="card text-center mb-3" style="width: 326px;">
+            <div class="card text-center mb-3">
                 <div class="card-header " >
                   <h4>Pro</h4>
                 </div>
@@ -66,7 +72,7 @@
                 <a href="#" class="btn btn-primary fs-5" style="width: 261.98px; height: 48px;">Get started</a>
               </div>
             </div>
-            <div class="card text-center mb-3" style="width: 326px;">
+            <div class="card text-center mb-3" >
                 <div class="card-header bg-primary">
                   <h4 class="text-light">Enterprise</h4>
                 </div>
@@ -76,9 +82,11 @@
                 <a href="#" class="btn btn-primary fs-5" style="width: 261.98px; height: 48px;">Contact us</a>
               </div>
             </div>
-            <h2 class="text-center fw-light">Compare plans</h2>
-            <table class="table my-5">
-                <thead>
+      </main>
+            <section class="table">
+            <h2 class="text-center fw-light p-4">Compare plans</h2>
+            <table class="table mb-4">
+                <thead class="fw-medium">
                   <tr>
                     <th scope="col"></th>
                     <th scope="col">Free</th>
@@ -125,8 +133,8 @@
                   </tr>
                 </tbody>
               </table>
-    </main>
-    <footer class="row d-flex">
+            </section>
+    <footer class="row d-flex ">
       <hr class="py-4">
         <div class="col-12 col-md">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
@@ -162,9 +170,9 @@
               </svg>
               <p>© 2017–2022</p>
         </div>
-        <div class="col=6 col-md">
+        <div class="col=6 col-md " style="width: 334px;">
             <h5>Features</h5>
-            <ul>
+            <ul class="list-unstyled">
                 <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Cool stuff</a></li>
                 <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Random feature</a></li>
                 <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Team feature</a></li>
@@ -175,7 +183,7 @@
         </div>
         <div class="col-6 col-md">
           <h5> Resources</h5>
-          <ul>
+          <ul class="list-unstyled">
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Resource</a></li>
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Resource name</a></li>
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Another resource</a></li>
@@ -184,7 +192,7 @@
         </div> 
         <div class="col-6">
           <h5>About</h5>
-          <ul>
+          <ul class="list-unstyled">
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Team</li>
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"> Locations</a></li>
             <li><a href="#" class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Privacy</a></li>
