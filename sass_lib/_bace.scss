@@ -9,7 +9,9 @@
     padding: 0;
     max-width: 1920px;
 }
+
     .container {
+        font-family: Roboto;
         max-width: 1110px;
         margin: 0 auto;
         box-sizing: border-box;
@@ -24,8 +26,11 @@
         text-align: center;
     }
     header {
-        background-color: $secondary;
+        background-color:$background-color;
+        display: flex;
+        flex-direction: row;
     }
     .promo {
-        background-color: $primary;
+        background-color: $primary-color;
     }
+
