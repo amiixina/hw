@@ -1,36 +1,24 @@
 
-  @font-face {
-    font-family: Roboto;
-    src: url(../fonts/Roboto-Regular.ttf);
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf) format("truetupe");
   }
-
 * {
     margin: 0;
     padding: 0;
     max-width: 1920px;
+    font-family: "Roboto";
 }
 
     .container {
-        font-family: Roboto;
         max-width: 1110px;
         margin: 0 auto;
         box-sizing: border-box;
     }
-    li {
-        list-style: none;
-    }
-    h2 {
-        text-align: center;
-    }
-    .p1 {
-        text-align: center;
-    }
-    header {
-        background-color:$background-color;
-        display: flex;
-        flex-direction: row;
-    }
-    .promo {
-        background-color: $primary-color;
-    }
-
+        .header {
+           background-color:$primary-color;
+            li {
+                list-style: none;
+            }
+        }
+    
