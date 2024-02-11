@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("div").addClass(function () {
         $(this).text("Lumos Maxima");
     });
-    ;
+
     $("div.a").css({
         background: "#f66668",
         borderRadius: "50% 0 50% 0",
