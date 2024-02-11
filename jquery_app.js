@@ -1,6 +1,5 @@
-$( function (){
-console. log("Document READY");
-});
+$(document).ready(
+    function (){
     $("#addHtmlt").html('<h1> New Element </h1>')
     $(".a").hide();
     $("section").remove();
@@ -14,4 +13,6 @@ console. log("Document READY");
         lineHeight: "80px",
         textAlign: "center",
     });
+}
+);
 
