@@ -11,16 +11,13 @@ class Cat{
     }
 }
 
-
-
-
 let cats = [];
 
 $(document).ready(function () {
     cats = [
-    new Cat('bengal', 3, 'female', 'brown and black', 'Sumire', false , 'images.jpeg'), 
-    new Cat('none', 2, 'male', 'black', 'Suguru', true, 'National_Black_Cat_Day.jpg.webp'),
-    new Cat('Maine coon', 4, 'male', 'grey', 'Tomoe', true , 'Unknown.jpeg')];
+    new Cat('bengal', 3, 'female', 'brown and black', 'Sumire', false , './img/images.jpeg'), 
+    new Cat('none', 2, 'male', 'black', 'Suguru', true, './img/cat2.JPG'),
+    new Cat('Maine coon', 4, 'male', 'grey', 'Tomoe', true , './img/cat3.JPG')];
 
 });
 
