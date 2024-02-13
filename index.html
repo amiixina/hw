@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-<container>
-    <div class="cats">
-    <img src="./img/images.jpeg" alt="bengal cat">
-    <ul>
-        <li class="breed"></li>
-        <li class="age"></li>
-        <li class="name"></li>
-        <li class="gender"></li>
-        <li class="color"></li>
-        <li class="status"></li>
-    </ul>
+<div class="container">
+        <div id="img"></div>
+        <ul>
+            <li id="breed">Breed:</li>
+            <li id="age">Age:</li>
+            <li id="gender">Gender:</li>
+            <li id="color">Color:</li>
+            <li id="name">Name:</li>
+            <li id="status">Status:</li>
+        </ul>
+
+<div class="btns">
+    <input type="submit" value="Cat 1" id="1" class="btn">
+    <input type="submit" value="Cat 2" id="2" class="btn">
+    <input type="submit" value="Cat 3" id="3" class="btn">
 </div>
-<button class="btn1">Cat1</button>
-<button class="btn2">Cat2</button>
-<button class="btn3">Cat3</button>
-</container>
+<script src="app.js"></script>
+</div>
 </body>
 </html>

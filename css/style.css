@@ -1,0 +1,24 @@
+.container {
+    
+  margin: 50px;
+}
+.btn{
+    background-color: rgb(222, 188, 214);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.active_btn{
+    background-color: rgb(231, 145, 140);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+   
+}
+.btn_action{
+    background-color: rgb(214, 59, 116);
+    color: azure;
+    padding: 10px;
+    border-color: rgb(89, 0, 255);
+}
+ul{
+    list-style: none;
+}
