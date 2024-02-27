@@ -3,77 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass_lib/index.scss">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" rel="stylesheet">
+    <title>Contact Book</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-        <nav>
-        <ul>
-            <li><a href="#"></a>Homepage</li>
-            <li><a href="#"></a> About author</li>
-            <li><a href="#"></a>Works</li>
-            <li><a href="#"></a>Process</li>
-            <li><a href="#"></a>Contacts</li>
-        </ul>
-      </nav>
-    </header>
-    <section class="promo">
-          <h1>Design and layout</h1>
-          <p>
-            Lorem Ipsum is fish text often used in print and web design, Lorem
-            Ipsum has been the standard "fish" for Latin texts since the early
-            16th century.
-          </p>
-    <button>WRITE ME</button>
-        
-    </section>
-        <section class="main">
-          <h2>About me</h2>
-          <p class="p1">
-            Lorem Ipsum is fish text often used in print and web design. Lorem
-            Ipsum has been the standard "fish" for Latin texts since the early
-            16th century.
-          </p>
-    </section>
-    <section class="cards">
-        <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-        <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-        <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-        <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-        <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-         <div class="card">
-            <img src="./img/numbers__item.png">
-        </div>
-    </section>
-        <section class="main">
-          <h2>How do I work</h2>
-          <p class="p1">
-            Lorem Ipsum is fish text often used in print and web design. Lorem
-            Ipsum has been the standard "fish" for Latin texts since the early
-            16th century.
-          </p>
-          <iframe width="1110" height="600" src="https://www.youtube.com/embed/R8lHaEZYpCU?si=-EN0G_sSboupRThy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-      <footer>
-        <h3>John Smith</h3>
-        <p>(c)copy 2018. All rights reserved.</p>
-      </footer>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Contact Book</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Contact</button>
+        </form>
+        <hr>
+        <div id="contactList"></div>
     </div>
-  </body>
-</html>
-    
+    <script src="app.js"></script>
 </body>
 </html>
