@@ -1,46 +1,38 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-  
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const id = Date.now();
-  
-    const contact = { id, name, phone };
-  
-    saveContact(contact);
-    renderContactList();
-  
-    document.getElementById('name').value = '';
-    document.getElementById('phone').value = '';
-  });
-  
-  function saveContact(contact) {
-    let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-    contacts.push(contact);
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }
-  
-  function renderContactList() {
-    const contactList = document.getElementById('contactList');
-    contactList.innerHTML = '';
-  
-    const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-  
-    contacts.forEach(contact => {
-      const div = document.createElement('div');
-      div.classList.add('card', 'mb-3');
-      div.setAttribute('id', `contact-${contact.id}`);
-  
-      const html = `
-        <div class="card-body">
-          <h5 class="card-title">${contact.name}</h5>
-          <p class="card-text">${contact.phone}</p>
-        </div>
-      `;
-  
-      div.innerHTML = html;
-      contactList.appendChild(div);
-    });
-  }
-  
-  renderContactList();
+let form_btn = document.querySelector('#submit');
+let form = document.querySelector('#form');
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    let name = document.querySelector('#name').value;
+    let days = Number(document.querySelector('#expire').value);
+
+    console.log(name, days);
+    document.cookie = `name=${name};max-age=${60*60*24*days}`
+});
+
+
+document.cookie = "name=Rob;";
+document.cookie = "id=6;";
+
+
+let cookies = document.cookie.split(";");
+
+
+
+for (let i=0; i<cookies.length; i++){
+    let part = cookies[i].split("="),
+    key = part[0],
+    value = part[1];
+    document.write("Ключ:", key);
+    document.write(" Значення:", value, "<br><br>");
+}
+
+
+
+let expDate = new Date();
+expDate.setHours(expDate.getHours()+3);
+
+document.cookie = "username=NewDATA;Expires=" + expDate.toUTCString();
+
+
+document.cookie = "user=NewUser;max-age=300";

@@ -3,26 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" rel="stylesheet">
-    <title>Contact Book</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Contact Book</h1>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Add Contact</button>
-        </form>
-        <hr>
-        <div id="contactList"></div>
-    </div>
-    <script src="app.js"></script>
+    <form action="/" id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="expire">Expire days</label>
+        <input type="number" id="expire">
+
+        <input type="submit" value="Submit" id="submit">
+    </form>
+      <script src="./app.js"></script>
 </body>
 </html>
