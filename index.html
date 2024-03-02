@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SpaceX Crew</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .card {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>SpaceX Crew</h2>
+            <div class="form-group">
+                <label for="agency">Select Agency:</label>
+                <select class="form-control" id="agency">
+                    <option value="nasa">NASA</option>
+                    <option value="esa">ESA</option>
+                    <option value="jaxa">JAXA</option>
+                </select>
+            </div>
+            <div id="crew-cards" class="row">
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#agency').on('change', function() {
+                    fetchCrew($(this).val());
+                });
+                fetchCrew('nasa');
+            });
     
-</body>
-</html>
+            function fetchCrew(agency) {
+                fetch(`https://api.spacexdata.com/v4/crew?filter=${agency}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        $('#crew-cards').empty();
+                        data.forEach(crew => {
+                            const card = `
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="${crew.image}" alt="${crew.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${crew.name}</h5>
+                                        <p class="card-text">Agency: ${crew.agency}</p>
+                                        <a href="${crew.wiki_href}" class="btn btn-primary">Wiki</a>
+                                    </div>
+                                </div>
+                            `;
+                            $('#crew-cards').append(card);
+                        });
+                    });
+            }
+        </script>
+    </body>
+    </html>
