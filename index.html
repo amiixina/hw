@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cookie Form</title>
 </head>
 <body>
-    <form action="/" id="form">
-        <label for="name">Name</label>
-        <input type="text" id="name">
-        <label for="expire">Expire days</label>
-        <input type="number" id="expire">
-
-        <input type="submit" value="Submit" id="submit">
+    <form id="form">
+        <label for="name">Ім'я:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Вік:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="expire">Дні зберігання:</label><br>
+        <input type="text" id="expire" name="expire"><br>
+        <input type="submit" id="submit" value="Submit">
     </form>
       <script src="./app.js"></script>
 </body>
