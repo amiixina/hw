@@ -1,36 +1,52 @@
-let form_btn = document.querySelector('#submit');
-let form = document.querySelector('#form');
+const form = document.getElementById('cookieForm');
+const nameInput = document.getElementById('name');
+const ageInput = document.getElementById('age');
+const daysInput = document.getElementById('days');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let name = document.querySelector('#name').value;
-    let days = Number(document.querySelector('#expire').value);
 
-    console.log(name, days);
-    document.cookie = `name=${name};max-age=${60*60*24*days}`;
-    document.cookie = `age=${days};max-age=${60*60*24*days}`;
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); 
 
+
+  const name = nameInput.value;
+  const age = ageInput.value;
+  const days = daysInput.value;
+
+ 
+  setCookie('name', name, days);
+  setCookie('age', age, days);
+
+ 
+  document.write('Name cookie: ' + getCookie('name') + '<br>');
+  document.write('Age cookie: ' + getCookie('age') + '<br>');
 });
 
-function displayCookies() {
-    let cookies = document.cookie.split(";");
-
+function setCookie(name, value, days) {
+    const expires = days * 24 * 60 * 60 * 1000; 
+    const date = new Date(Date.now() + expires); 
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  }
+  
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].trim();
-        let keyValue = cookie.split("=");
-
-        if (keyValue[0] === "name" || keyValue[0] === "age") {
-            document.write(`Ключ: ${keyValue[0]} Значення: ${decodeURIComponent(keyValue[1])}<br><br>`);
-        }
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
     }
-}
-
-let expDate = new Date();
-expDate.setHours(expDate.getHours()+3);
-
-document.cookie = "username=NewDATA;Expires=" + expDate.toUTCString();
-
-document.cookie = "user=NewUser;max-age=300";
-
-displayCookies();
+  }
+  
+  const nameCookie = getCookie("name");
+  const ageCookie = getCookie("age");
+  if (nameCookie !== null) {
+    document.write("Name: " + nameCookie + "<br>");
+  } else {
+    document.write("Name cookie not found.<br>");
+  }
+  if (ageCookie !== null) {
+    document.write("Age: " + ageCookie + "<br>");
+  } else {
+    document.write("Age cookie not found.<br>");
+  }
 
