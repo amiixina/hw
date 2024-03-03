@@ -3,40 +3,37 @@ const nameInput = document.getElementById('name');
 const ageInput = document.getElementById('age');
 const daysInput = document.getElementById('days');
 
-
 form.addEventListener('submit', function(event) {
   event.preventDefault(); 
-
 
   const name = nameInput.value;
   const age = ageInput.value;
   const days = daysInput.value;
 
- 
   setCookie('name', name, days);
   setCookie('age', age, days);
 
- 
-  document.write('Name cookie: ' + getCookie('name') + '<br>');
-  document.write('Age cookie: ' + getCookie('age') + '<br>');
+  displayCookies();
 });
 
 function setCookie(name, value, days) {
-    const expires = days * 24 * 60 * 60 * 1000; 
-    const date = new Date(Date.now() + expires); 
-    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-  }
-  
-  function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.startsWith(name + '=')) {
-        return cookie.substring(name.length + 1);
-      }
+  const expires = days * 24 * 60 * 60 * 1000; 
+  const date = new Date(Date.now() + expires); 
+  document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+}
+
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
     }
   }
-  
+  return null;
+}
+
+function displayCookies() {
   const nameCookie = getCookie("name");
   const ageCookie = getCookie("age");
   if (nameCookie !== null) {
@@ -49,4 +46,4 @@ function setCookie(name, value, days) {
   } else {
     document.write("Age cookie not found.<br>");
   }
-
+}
