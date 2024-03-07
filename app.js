@@ -9,9 +9,10 @@ form.addEventListener('submit', function(event) {
   const name = nameInput.value;
   const age = ageInput.value;
   const days = daysInput.value;
+  const expires = days * 24 * 60 * 60 * 1000; 
+  const date = new Date(Date.now() + expires); 
+  document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/;';
 
-  setCookie('name', name, days);
-  setCookie('age', age, days);
 
   displayCookies();
 });
