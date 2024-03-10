@@ -127,20 +127,6 @@ footer p {
     font-size: 16px;
     margin: 0;
 }
-
-@mixin card-style($bg-color, $text-color) {
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.card {
-    @include card-style($color-bg, $color-accent);
-}
-
-.card-secondary {
-    @include card-style($color-secondary, $color-primary);
 }
 
     
