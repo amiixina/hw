@@ -1,24 +1,146 @@
 
-@font-face {
-    font-family: "Roboto";
-    src: url(../fonts/Roboto-Regular.ttf) format("truetupe");
-  }
-* {
-    margin: 0;
-    padding: 0;
-    max-width: 1920px;
-    font-family: "Roboto";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
 }
 
-    .container {
-        max-width: 1110px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-        .header {
-           background-color:$primary-color;
-            li {
-                list-style: none;
-            }
-        }
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.header {
+    display: none;
+}
+
+.header-a {
+    background-color: $color-secondary;
+    padding: 20px;
+}
+
+.header-a nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-a nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.header-a nav ul li {
+    margin-right: 20px;
+}
+
+.header-a nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+}
+
+.promo {
+    background-color: #EEEFF1;
+    padding: 40px;
+    text-align: left;
+}
+
+.promo h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.promo p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: $color-primary;
+}
+
+.promo button {
+    background-color: $color-bg;
+    color: $color-accent;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 225px;
+    height: 65px;
+}
+
+.main {
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main .p1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: $color-primary;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    height: 250px;
+    background-color: $color-bg;
+}
+
+.cards .card {
+    margin-bottom: 20px;
+}
+
+.cards .card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: $color-bg;
+    padding: 20px;
+    text-align: left;
+}
+
+footer h3 {
+    color: $color-accent;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: $color-accent;
+    font-size: 16px;
+    margin: 0;
+}
+
+@mixin card-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    @include card-style($color-bg, $color-accent);
+}
+
+.card-secondary {
+    @include card-style($color-secondary, $color-primary);
+}
+
     

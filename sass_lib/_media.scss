@@ -1,0 +1,54 @@
+@media screen and (max-width: $breakpoint) {
+    .header-a {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .header nav {
+        display: flex;
+        position: relative;
+    }
+    .header nav ul {
+        position: absolute;
+        background-color: $color-secondary;
+        flex-direction: column;
+        padding: 30px;
+        display: none;
+        list-style: none;
+
+    }
+    .header ul li {
+        line-height: 2;
+        font-size: 20px;
+    }
+ a {
+    color: #000;
+}
+.header nav {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/humburger.jpg.png); 
+    background-size: cover;
+}
+
+.header nav:hover ul {
+    display: flex;
+}
+iframe {
+height: 100%;
+width: 600px;
+}
+.cards {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media screen and (max-width:$breakpointt) {
+    .contaiiner   {
+     justify-content: left;
+    }
+     }
