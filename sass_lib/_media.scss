@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+    header {
+      nav {
+        flex-direction: column;
+  
+        .menu {
+          display: none;
+        }
+  
+        .buttons {
+          margin-top: 20px;
+        }
+      }
+  
+      .hero {
+        h1 {
+          font-size: 36px;
+        }
+  
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  
+    .features {
+      .feature-items {
+        flex-direction: column;
+  
+        .feature-item {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  
+    .plans {
+      .plan-items {
+        flex-direction: column;
+  
+        .plan-item {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  
+    .testimonials {
+      .testimonial-items {
+        flex-direction: column;
+  
+        .testimonial-item {
+          margin-bottom: 30px;
+        }
+      }
+  
+      .prev,
+      .next {
+        display: none;
+      }
+  
+      .markers {
+        margin-top: 20px;
+      }
+    }
+  }

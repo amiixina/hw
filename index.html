@@ -3,9 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass_lib/_bace.scss">
+    <link rel="stylesheet" href="./sass_lib/_media.scss">
+    <link rel="stylesheet" href="./sass_lib/_variables.scss">
+    <link rel="stylesheet" href="./sass_lib/index.scss">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.svg" alt="Lasles VPN logo">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button class="login">Login</button>
+                    <button class="signup">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Want anything to be easy with LaslesVPN?</h1>
+                <p>Provide a work for all your needs with ease and fun. Discover interesting features.</p>
+                <button class="get-started">Get Started</button>
+            </div>
+        </section>
+    </header>
+
+    <!-- Features section -->
+    <section class="features">
+        <div class="container">
+            <h2>We provide many features you can use</h2>
+            <div class="feature-items">
+                <div class="feature-item">
+                    <img src="feature1.svg" alt="Feature 1">
+                    <h3>Encrypted Connection</h3>
+                    <p>Yes, The Log Werks De</p>
+                </div>
+                <div class="feature-item">
+                    <img src="feature2.svg" alt="Feature 2">
+                    <h3>Connect Anywhere</h3>
+                    <p>The Log Connect Any Free</p>
+                </div>
+                <div class="feature-item">
+                    <img src="feature3.svg" alt="Feature 3">
+                    <h3>Huge Global Network</h3>
+                    <p>Fast VPN See LakeVPN everywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans section -->
+    <section class="plans">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="plan-items">
+                <div class="plan-item free">
+                    <h3>Free</h3>
+                    <p>$0<span>/mo</span></p>
+                    <ul>
+                        <li>Encrypted Connection</li>
+                        <li>Connect Anywhere</li>
+                        <li>Huge Global Network</li>
+                    </ul>
+                    <button class="select">Select</button>
+                </div>
+                <div class="plan-item standard">
+                    <h3>Standard</h3>
+                    <p>$9<span>/mo</span></p>
+                    <ul>
+                        <li>Encrypted Connection</li>
+                        <li>Connect Anywhere</li>
+                        <li>Huge Global Network</li>
+                        <li>Extra Fast Speed</li>
+                        <li>Extra Security</li>
+                    </ul>
+                    <button class="select">Select</button>
+                </div>
+                <divclass="plan-item premium">
+                    <h3>Premium</h3>
+                    <p>$12<span>/mo</span></p>
+                    <ul>
+                        <li>Encrypted Connection</li>
+                        <li>Connect Anywhere</li>
+                        <li>Huge Global Network</li>
+                        <li>Extra Fast Speed</li>
+                        <li>Extra Security</li>
+                        <li>Premium Support</li>
+                    </ul>
+                    <button class="select">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Trusted by Thousands of Happy Customer</h2>
+            <div class="testimonial-items">
+                <div class="testimonial-item">
+                    <img src="testimonial1.jpg" alt="Testimonial 1">
+                    <p>LaslesVPN is the best VPN service I've ever used. It's incredibly fast, easy to use, and the customer support is outstanding.</p>
+                    <div class="author">
+                        <h4>John Doe</h4>
+                        <p>CEO, Example Company</p>
+                    </div>
+                </div>
+                <!-- Add more testimonials here -->
+            </div>
+            <button class="prev">
+                <img src="arrow-left.svg" alt="Previous">
+            </button>
+            <button class="next">
+                <img src="arrow-right.svg" alt="Next">
+            </button>
+            <div class="markers">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+   <script src="./app.js"></script> 
 </body>
 </html>
