@@ -1,46 +1,73 @@
-const testimonialItems = document.querySelectorAll('.testimonial-item');
+const slider = document.querySelector('.slider');
+const slides = Array.from(document.querySelectorAll('.slide'));
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
-const markers = document.querySelectorAll('.markers span');
+const dots = document.querySelectorAll('.dot');
+const pagination = document.querySelector('.pagination');
 
-let currentTestimonial = 0;
+let currentSlide = 0;
 
-function showTestimonial(index) {
-  testimonialItems.forEach((item, i) => {
-    item.classList.remove('active');
-    markers[i].classList.remove('active');
+function showSlide(slideIndex) {
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active');
+
+    if (index === slideIndex) {
+      slide.classList.add('active');
+    }
   });
 
-  testimonialItems[index].classList.add('active');
-  markers[index].classList.add('active');
+  dots.forEach((dot, index) => {
+    dot.classList.remove('active');
 
-  currentTestimonial = index;
+    if (index === slideIndex) {
+      dot.classList.add('active');
+    }
+  });
+
+  updatePagination(slideIndex);
 }
 
-showTestimonial(currentTestimonial);
+function nextSlide() {
+  currentSlide++;
 
-nextButton.addEventListener('click', () => {
-  currentTestimonial++;
-
-  if (currentTestimonial >= testimonialItems.length) {
-    currentTestimonial = 0;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
   }
 
-  showTestimonial(currentTestimonial);
-});
+  showSlide(currentSlide);
+}
 
-prevButton.addEventListener('click', () => {
-  currentTestimonial--;
+function prevSlide() {
+  currentSlide--;
 
-  if (currentTestimonial < 0) {
-    currentTestimonial = testimonialItems.length - 1;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
   }
 
-  showTestimonial(currentTestimonial);
-});
+  showSlide(currentSlide);
+}
 
-markers.forEach((marker, index) => {
-  marker.addEventListener('click', () => {
-    showTestimonial(index);
+function updateDots() {
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      currentSlide = index;
+    });
   });
-});
+}
+
+function updatePagination(slideIndex) {
+  const paginationItems = document.querySelectorAll('.pagination-item');
+  paginationItems.forEach((item, index) => {
+    if (index === slideIndex) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+showSlide(currentSlide);
